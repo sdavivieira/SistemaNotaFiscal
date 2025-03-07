@@ -7,9 +7,9 @@ namespace SistemaNotaFiscal.ProductApi.Services
 {
     public class ProdutoService : IProdutoService
     {
-        private readonly IProductRepository _repository;
+        private readonly IProdutoRepository _repository;
         private static readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
-        public ProdutoService(IProductRepository productRepository)
+        public ProdutoService(IProdutoRepository productRepository)
         {
             _repository = productRepository;
         }

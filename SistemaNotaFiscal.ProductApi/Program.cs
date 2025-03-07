@@ -20,7 +20,7 @@ builder.Services.AddDbContext<AppProductDbContext>(options =>
     options.UseInMemoryDatabase("SistemaNotaFiscalDb"));
 
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 var app = builder.Build();
 

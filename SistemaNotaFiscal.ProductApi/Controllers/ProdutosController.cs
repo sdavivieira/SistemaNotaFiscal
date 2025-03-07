@@ -7,11 +7,11 @@ namespace SistemaNotaFiscal.ProductApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductController : ControllerBase
+    public class ProdutosController : ControllerBase
     {
         private readonly IProdutoService _produtoService;
 
-        public ProductController(IProdutoService produtoService)
+        public ProdutosController(IProdutoService produtoService)
         {
             _produtoService = produtoService;
         }

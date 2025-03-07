@@ -14,7 +14,7 @@ namespace SistemaNotaFiscal.Faturamento.Services
 
         public async Task<Produto> ObterProdutoPorId(int produtoId)
         {
-            var response = await _httpClient.GetAsync($"https://localhost:7295/api/Product/{produtoId}");
+            var response = await _httpClient.GetAsync($"https://localhost:7295/api/Produtos/{produtoId}");
             if (response.IsSuccessStatusCode)
             {
                 var produto = await response.Content.ReadFromJsonAsync<Produto>();
@@ -25,7 +25,7 @@ namespace SistemaNotaFiscal.Faturamento.Services
 
         public async Task<bool> AtualizarSaldoProduto(int produtoId, int quantidade)
         {
-            var response = await _httpClient.PutAsJsonAsync($"https://localhost:7295/api/Product/{produtoId}/atualizarSaldo", quantidade);
+            var response = await _httpClient.PutAsJsonAsync($"https://localhost:7295/api/Produtos/{produtoId}/atualizarSaldo", quantidade);
             return response.IsSuccessStatusCode;
         }
 

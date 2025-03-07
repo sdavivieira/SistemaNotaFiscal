@@ -2,7 +2,7 @@
 
 namespace SistemaNotaFiscal.ProductApi.Repositories.Interfaces
 {
-    public interface IProductRepository
+    public interface IProdutoRepository
     {
         Task<Produto> CadastrarProduto(Produto produto);
         Task<bool> AtualizarSaldoProduto(Produto produto);

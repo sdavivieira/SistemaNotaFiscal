@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SistemaNotaFiscal.ProductApi.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProdutoRepository : IProdutoRepository
     {
         private readonly AppProductDbContext _appDbContext;
-        public ProductRepository(AppProductDbContext appDbContext)
+        public ProdutoRepository(AppProductDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }

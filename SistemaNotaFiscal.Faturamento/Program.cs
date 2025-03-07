@@ -21,7 +21,7 @@ builder.Services.AddSwaggerGen(c =>
 
     c.DocInclusionPredicate((docName, apiDesc) =>
     {
-        if (apiDesc.RelativePath.StartsWith("api/product", StringComparison.OrdinalIgnoreCase))
+        if (apiDesc.RelativePath.StartsWith("api/produtos", StringComparison.OrdinalIgnoreCase))
             return false; 
         return true;
     });
@@ -42,7 +42,7 @@ builder.Services.AddScoped<INotaFiscalService, NotaFiscalService>();
 builder.Services.AddScoped<INotaFiscalRepository, NotaFiscalRepository>();
 
 builder.Services.AddScoped<SistemaNotaFiscal.ProductApi.Services.Interfaces.IProdutoService, SistemaNotaFiscal.ProductApi.Services.ProdutoService>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
